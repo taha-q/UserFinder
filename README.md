@@ -23,20 +23,58 @@
 
 
 ### How to Install
-
+(.sh/shell version)
++ Termux
 ```
 apt update
 apt upgrade
-apt install git
-apt install curl
-apt install jq
-git clone https://github.com/mishakorzik/UserFinder
-```
+apt install git curl jq -y
 
-### How to Start
-```
+git clone https://github.com/mishakorzik/UserFinder
 cd UserFinder
-bash UserFinder.sh
+
+chmod +x UserFinder.sh
+./UserFinder.sh
+```
++ Debian/Ubuntu Based Distributions ( any-dist that uses the APT package manager)
+```
+sudo apt update -y && sudo apt upgrade -y
+sudo install git curl jg
+git clone https://github.com/mishakorzik/UserFinder
+
+cd UserFinder
+
+chmod +x UserFinder.sh
+./UserFinder.sh
+```
+(.py/python version)
++ Termux
+```
+apt update -y && yes | apt upgrade
+apt install python3 python3-venv
+
+git clone https://github.com/mishakorzik/UserFinder
+cd UserFinder/
+
+python3 -m venv venv && source /venv/bin/activate
+pip install -r requiremnts.txt
+
+python3 UserFinder.py -u <user1,user2,user3> --timeout 1
+
+```
++ Debian/Ubuntu Based Distributions ( any-dist that uses the APT package manager)
+```
+sudo apt update -y && yes | apt upgrade
+sudo apt install python3 python3-venv
+
+git clone https://github.com/mishakorzik/UserFinder
+cd UserFinder/
+
+python3 -m venv venv && source /venv/bin/activate
+pip install -r requiremnts.txt
+
+python3 UserFinder.py -u <user1,user2,user3> --timeout 1
+
 ```
 
 ## Find Me 
