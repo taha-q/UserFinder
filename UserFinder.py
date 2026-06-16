@@ -26,7 +26,6 @@ class Finder:
                 {"name": "Linkedin", "url": f"https://www.linkedin.com/{username}/"}
             ]
 
-        print(f"(TOTAL) {len(platforms)} platforms")
 
         try:
             for platform in platforms:
@@ -60,9 +59,10 @@ def main() -> None:
 
     #sanitize usernames
     usernames: list = (args.usernames).split(",")
-    print(f"(I/O) received {len(usernames)}")
-
+    print(f"(IO) received {len(usernames)} usernames")
     finder = Finder()
+
+    print("*" * 25)
 
     for username in usernames:
         finder.search(username , args.timeout)
