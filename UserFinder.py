@@ -59,8 +59,14 @@ def main() -> None:
 
     #sanitize usernames
     usernames: list = (args.usernames).split(",")
-    print(f"(IO) received {len(usernames)} usernames")
+    print(f"(IO) total-usernames: {len(usernames)}")
     finder = Finder()
+
+
+    if not args.usernames:
+        print("(IO) no usernames supplied. exiting")
+        exit(1)
+
 
     print("*" * 25)
 
