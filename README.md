@@ -26,6 +26,6 @@ pip install requests
     .i will add conccurency ( async )
     .other options?
 
-##Note
+## Note
 thanks for any form contributions
 i just wanna maintain amd revive tools for termux
