@@ -1,18 +1,31 @@
-# Userfinder Simplified
-This a Simplified and easy version of the Userfinder
+# UserFinder (Simplified)
 
+A lightweight CLI tool to search usernames across multiple platforms.
 
-# installation
-    .Termux: ```bash
-             pkg update && yes | pkg upgrade;\
-             pkg install python3 python3-venv python3-pip -y\
-             python3 -m venv userfinder-venv && source userfinder-venv/bin/activate;\
-             pip install requests
-             ```
+## Installation
 
-    .APT based distro: ```bash
-             apt update && yes | apt upgrade;\
-             apt install python3 python3-venv python3-pip -y\
-             python3 -m venv userfinder-venv && source userfinder-venv/bin/activate;\
-             pip install requests
-             ```
+### Termux
+
+```bash
+pkg update && pkg upgrade -y
+pkg install python python-pip -y
+python -m venv .venv && source .venv/bin/activate
+pip install requests
+```
+
+### Debian/Ubuntu/Mint
+
+```bash
+sudo apt update -y && sudo apt upgrade -y
+s//udo apt install python3 python3-venv python3-pip -y
+python3 -m venv .venv && source .venv/bin/activate
+pip install requests
+```
+
+## Upcoming
+    .i will add conccurency ( async )
+    .other options?
+
+##Note
+thanks for any form contributions
+i just wanna maintain amd revive tools for termux
